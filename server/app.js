@@ -39,16 +39,7 @@ app.use((req, res) => {
     });
 });
 
-app.listen(port, console.log(`App is running on localhost port ${port}`));
+app.listen(port, console.log(`App is on port ${port}`));
 
-mongoose.connect('mongodb://localhost/africaxyz', {
-  useNewUrlParser: true,
-});
-
-mongoose.connection
-  .once('open', () => console.log('Database Connected :)'))
-  .on('error', (error) => {
-    console.log('Error', error);
-});
 
 export default app;

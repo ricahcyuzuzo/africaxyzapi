@@ -51,17 +51,6 @@ app.use(function (req, res) {
     errorMessage: '404 Endpoint not found'
   });
 });
-app.listen(port, console.log("App is running on localhost port ".concat(port)));
-
-_mongoose["default"].connect('mongodb://localhost/africaxyz', {
-  useNewUrlParser: true
-});
-
-_mongoose["default"].connection.once('open', function () {
-  return console.log('Database Connected :)');
-}).on('error', function (error) {
-  console.log('Error', error);
-});
-
+app.listen(port, console.log("App is on port ".concat(port)));
 var _default = app;
 exports["default"] = _default;
